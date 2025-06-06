@@ -7,9 +7,9 @@ export default function PortfolioCard({ project }) {
   if (project.isDone)
     return (
       <div className="col-xl-4 col-md-6 mb-3 d-flex align-items-center justify-content-center flex-column">
-        <Link onClick={() => { window.open(‍‍‍‍‍`${project.link}`, '_blank'); }}>
+        <div onClick={() => { window.open(‍‍‍‍‍`${project.link}`, '_blank'); }}>
           <ShapeMonitor imgSrc={project.imgSrc} projectName={project.name} />
-        </Link>
+        </div>
         <div className="pt-4 pb-3 d-flex flex-column align-items-start justify-content-center">
           <p className="text-wrap fw-bolder">
             {/* <Link to={project.link}>
