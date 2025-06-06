@@ -1,8 +1,8 @@
 {
-  "name": "resume-v2",
+  "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Abolfazl26s.github.io/portfolio",
+  "homepage": "https://abolfazl26s.github.io/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
