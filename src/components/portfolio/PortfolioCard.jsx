@@ -1,6 +1,7 @@
 import React from "react";
 import ShapeMonitor from "./ShapeMonitor";
 import { Link } from "react-router-dom";
+import CustomLink from "../exLink";
 
 export default function PortfolioCard({ project }) {
   if (project.isDone)
@@ -11,10 +12,14 @@ export default function PortfolioCard({ project }) {
         </Link>
         <div className="pt-4 pb-3 d-flex flex-column align-items-start justify-content-center">
           <p className="text-wrap fw-bolder">
-            <Link to={project.link}>
+            {/* <Link to={project.link}>
               <i className="fas fa-link"></i>
               <span className="text-dark ms-1">{project.name}</span>
-            </Link>
+            </Link> */}
+            <CustomLink to={project.link}>
+              <i className="fas fa-link"></i>
+              <span className="text-dark ms-1">{project.name}</span>
+            </CustomLink>
           </p>
           <p>
             <i className="fas fa-clock"></i>
