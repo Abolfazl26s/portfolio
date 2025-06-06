@@ -1,0 +1,109 @@
+@import 'public/scss/_variables.scss';
+@import 'public/scss/_mixin.scss';
+
+.leftSide {
+  .mainContent {
+    width: 100%;
+    min-height: 40em;
+    padding: 3em 1.5em;
+    box-shadow: $boxShadowSm;
+    border-radius: $borderRadius;
+    background: $lightColor;
+
+    .content {
+      display: block;
+      animation: movingText 0.5s ease;
+    }
+
+    @keyframes movingText {
+      from {
+        transform: translateX(-50px);
+        opacity: 0;
+      }
+    }
+    to {
+      transform: translateX(0px);
+      opacity: 1;
+    }
+  }
+
+  .mainTitle {
+    font-weight: 900;
+    position: relative;
+    margin-bottom: 1em;
+    padding-right: 110px;
+    &::after {
+      content: '';
+      position: Absolute;
+      top: 50%;
+      right: 0;
+      width: 100px;
+      height: 4px;
+      background: red;
+    }
+  }
+
+  .mainDes {
+    color: $textColor;
+    text-align: justify;
+    line-height: 2;
+  }
+
+  .mySkills {
+    .skillsCard {
+      .skillCard {
+        background-color: var(--bg-color);
+        padding: 1em;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        border-radius: 1em;
+
+        i {
+          font-size: 2.3em;
+          padding: 0.2em;
+          color: var(--icon-color);
+        }
+
+        .slillContent {
+          .skillTitle {
+            font-weight: bold;
+            margin-bottom: 0.3em;
+            color: $textDarkColor;
+          }
+
+          .skillDes {
+            color: $textColor;
+            line-height: 1.7;
+            font-weight: 100;
+          }
+        }
+      }
+    }
+  }
+
+  #experience,
+  #education {
+    padding: 1.5em;
+    .experience-title,
+    .education-title {
+      font-weight: bolder;
+      font-size: 1.5em;
+      i {
+        color: $accentColor;
+        font-size: 0.8em;
+      }
+    }
+    .experience-card,
+    .education-card {
+      background-color: var(--bg-color);
+      padding: 1em;
+      border-radius: 1em;
+      .card-title {
+        font-size: 1em;
+        font-weight: bold;
+        color: $textDarkColor;
+      }
+    }
+  }
+}

@@ -1,0 +1,153 @@
+$height:35px;
+$imgSize:180px;
+$imgRadius:50%;
+$colorBorder:#888;
+
+
+
+.careerHistory__card{
+    position: relative;
+    height: 200px;
+    max-width: 1024px;
+    // background: #000;
+display: flex;
+align-items: center;
+justify-content: center;
+&::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 33%;
+    width: 100px;
+    background-color: transparent;
+    border-top: 1px dashed $colorBorder;
+    border-right: 1px dashed $colorBorder;
+    height: $height;
+}
+&::before{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 33%;
+    width: 100px;
+    background-color: transparent;
+    border-top: 1px dashed $colorBorder;
+    border-left: 1px dashed $colorBorder;
+    height: $height;
+}
+    .card{
+        border-radius: 0;
+        position: relative;
+        width: calc(100% - 400px);
+        height: 147px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 1em;
+        border: 1px dashed $colorBorder;
+        margin-right: 40px;
+        &::after{
+            position: absolute;
+            content: '';
+            top: 52%;
+            width: 132px;
+            height: $height;
+            border-top: 1px dashed $colorBorder;
+            left: 100%;
+        }
+
+        &::before{
+            position: absolute;
+            content: '';
+            top: 52%;
+            width: 92px;
+            height: $height;
+            border-top: 1px dashed $colorBorder;
+            right: 100%;
+        }
+
+        .careerHistory__card_img{
+            position: absolute;
+            right: -11%;
+            width: $imgSize;
+            height: $imgSize;
+            border: rgb(171, 170, 166) 6px solid;            
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: $imgRadius;     
+            background: $colorBorder;       
+            z-index: 9;
+            img{                
+                position: relative;
+                object-fit: fill;
+                width: 100%;
+                height: 100%;                
+            }
+        }
+
+        .careerHistory__card_desc{
+            position: absolute;
+            right: 27%;
+
+            .componyName{
+                font-weight: bold;
+                font-size: 1.2em;
+            }
+            .jobTitle{
+                font-size: 1em;
+            }
+        }
+        .EndOfDate{
+            position: absolute;
+            left: 10%;
+            top: 50%;
+            transform: translateY(-50%);
+            font-weight: bolder;
+        }
+    }
+}
+
+@media screen and (max-width: '1024px') {
+    .careerHistory__card_desc{        
+        right: 30% !important;
+    }
+}
+
+@media screen and (max-width: '768px') {
+    .careerHistory__card{
+        &::after,&::before{
+            display: none !important;
+        }
+    }
+    .card{
+        width: calc(100% - 100px) !important;
+    }
+}
+
+@media screen and (max-width: '540px') {
+    .card{
+        width: 100% !important;
+        margin-right: 0 !important;
+        &::after,&::before{
+            width: 50px !important;
+        }
+
+        .careerHistory__card_img{
+            top: -20% !important;
+            left: 0% !important;
+            
+            width: 90px !important;
+            height: 90px !important;
+        }
+
+        .careerHistory__card_desc{
+            right: 25% !important;
+        }
+    }
+    .EndOfDate{
+        display: none;
+    }
+}

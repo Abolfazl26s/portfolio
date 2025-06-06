@@ -1,0 +1,24 @@
+@mixin transitionHover(){
+    --tw-bg-opacity: 1;
+    --tw-gradient-from: #fa5252;
+    --tw-gradient-to: rgba(250,82,82,0);
+    --tw-gradient-stops: var(--tw-gradient-from),var(--tw-gradient-to);
+    --tw-gradient-to: #dd2476;
+    transition-property: color,background-color,border-color,text-decoration-color,fill,stroke;
+    transition-duration: .3s;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    cursor: pointer;
+
+    &:hover{
+        background-image: linear-gradient(to right,var(--tw-gradient-stops));
+        --tw-text-opacity: 1;
+        color: rgb(255 255 255/var(--tw-text-opacity));
+    }
+}
+
+
+@mixin flexCenter(){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

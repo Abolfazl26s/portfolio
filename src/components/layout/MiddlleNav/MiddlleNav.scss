@@ -1,0 +1,77 @@
+@import 'public/scss/_variables.scss';
+@import 'public/scss/_mixin.scss';
+
+.navBar {
+  background: $lightColor;
+  width: fit-content;
+  padding: 2em;
+  margin: 1em 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1em;
+  flex-wrap: wrap;
+  border-radius: $borderRadius;
+  box-shadow: $boxShadowSm;
+  .btnToggleMenu{
+    display: none ;
+    position: absolute;
+    left: -42px;
+    top: 0;
+    background: #fff;
+    border-radius: 10px 0 0 10px;
+    align-items: center;
+    justify-content: center;
+    padding: .5em;
+    i{
+      font-size: 1.5em;
+      padding: 0;
+      margin: 0;
+    }
+  }
+  .navBtn {
+    background: $backgroundItems;
+    @include flexCenter();
+    flex-direction: column;
+    padding: 0.7em 0.8em;
+    min-width: 11em;
+    gap: 0.5em;
+    @include transitionHover();
+    color: $textColor;
+    i {
+      font-size: 1.3em;
+    }
+    &.active {
+      background-image: linear-gradient(to right, var(--tw-gradient-stops));
+      --tw-text-opacity: 1;
+      color: rgb(255 255 255 / var(--tw-text-opacity));
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navBar{
+    position: fixed;
+    top: 15%;
+    right: -230px;
+    border-radius: 0 0 0 10px;
+    z-index: 99;
+    max-width: 230px;
+    transition: all .5s ease;
+
+    .navBtn{
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .btnToggleMenu{
+      display: flex;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    }
+  }
+}
+
+.activeMobile{
+  right: 0;
+}

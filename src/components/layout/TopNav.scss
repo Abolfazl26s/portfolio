@@ -1,0 +1,29 @@
+@import 'public/scss/_variables.scss';
+@import 'public/scss/_mixin.scss';
+
+
+.topNav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2em auto;
+
+    .topNav__title{
+        color: $lightColor;
+    }
+  
+    .topNav__actionBtn {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 0.5em;
+      .topNavBtn {
+        background-color: $lightColor;
+        @include flexCenter();
+        border-radius: 2em;
+        width: 2em;
+        height: 2em;
+        @include transitionHover();
+      }
+    }
+  }
