@@ -7,7 +7,7 @@ export default function Information() {
     <span className="infoIcon"><i className="fas fa-phone-flip" /></span>
     <div className="infoContent">
       <p className="infoTitle">شماره تماس</p>
-      <p className="infoText">07776890129</p>
+      <a href='tel:+447776890129' className="infoText">+44 7776890129</a>
     </div>
   </div>
   <div className="information__card">
