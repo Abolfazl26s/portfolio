@@ -7,7 +7,7 @@ export default function Information() {
     <span className="infoIcon"><i className="fas fa-phone-flip" /></span>
     <div className="infoContent">
       <p className="infoTitle">شماره تماس</p>
-      <p className="infoText">09904470638</p>
+      <p className="infoText">07776890129</p>
     </div>
   </div>
   <div className="information__card">
@@ -21,7 +21,7 @@ export default function Information() {
     <span  className="infoIcon"><i className="fas fa-envelope" /></span>
     <div className="infoContent">
       <p className="infoTitle">پست الکترونیک</p>
-      <p className="infoText text-wrap">asae********@gmail.com</p>
+      <p className="infoText text-wrap">asaeidabadi243gmail.com</p>
     </div>
   </div>
   <div className="information__card">
