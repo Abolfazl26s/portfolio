@@ -21,7 +21,7 @@ export default function Information() {
     <span  className="infoIcon"><i className="fas fa-envelope" /></span>
     <div className="infoContent">
       <p className="infoTitle">پست الکترونیک</p>
-      <p className="infoText text-wrap">asaeidabadi243gmail.com</p>
+      <p className="infoText text-wrap">asaeidabadi243@gmail.com</p>
     </div>
   </div>
   <div className="information__card">
