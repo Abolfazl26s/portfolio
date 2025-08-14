@@ -1,0 +1,227 @@
+{
+  "menuItems": [
+    { "id": "01", "title": "خانه", "link": "/", "icon": "fas fa-house-user" },
+    {
+      "id": "02",
+      "title": "پروژه ها",
+      "link": "/portfolio",
+      "icon": "fas fa-briefcase"
+    },
+    {
+      "id": "03",
+      "title": "مهارت های من",
+      "link": "/skills",
+      "icon": "fab fa-black-tie"
+    },
+    {
+      "id": "04",
+      "title": "گواهینامه ها",
+      "link": "/certificates",
+      "icon": "fas fa-user-graduate"
+    }
+  ],
+  "projectTemplate": [
+    {
+      "id": "01",
+      "name": "فروشگاه بازار آنلاین",
+      "link": "https://abolfazl26s.github.io/bazar-online/",
+      "time": "۳ هفته",
+      "isDone": true,
+      "desc": "pages: index, login,my-account, order-completed, product, 404,",
+      "imgSrc": "https://abolfazl26s.github.io/project_data/images/projects/bazarOnline.png"
+    },
+    {
+      "id": "02",
+      "name": "فروشگاه جم بازار",
+      "link": "https://abolfazl26s.github.io/gemStone/",
+      "time": "۱ هفته",
+      "isDone": true,
+      "desc": "pages: index, account, cart, contact, invoice-details, shop, wishlist",
+      "imgSrc": "https://abolfazl26s.github.io/project_data/images/projects/gemStone.png"
+    },
+    {
+      "id": "03",
+      "name": "فروشگاه کال آف",
+      "link": "https://abolfazl26s.github.io/call-off-demo/",
+      "time": "2 هفته",
+      "isDone": true,
+      "desc": "pages: index, login, cart, checkout, product",
+      "imgSrc": "https://abolfazl26s.github.io/project_data/images/projects/callOfProject.jpg"
+    },
+    {
+      "id": "04",
+      "name": "فروشگاه handy Art",
+      "link": "",
+      "time": "۱ هفته",
+      "isDone": true,
+      "desc": "pages: index, login, blog, checkout, order, tiket",
+      "imgSrc": "https://abolfazl26s.github.io/project_data/images/projects/handyArt.png"
+    },
+    {
+      "id": "05",
+      "name": "قالب شرکتی ایده گستران ثمین پارس",
+      "link": "https://abolfazl26s.github.io/ICC",
+      "time": "۱ هفته",
+      "isDone": true,
+      "desc": "ALL Page",
+      "imgSrc": "https://abolfazl26s.github.io/project_data/images/projects/icc.png"
+    },
+    {
+      "id": "06",
+      "name": "قالب لندینگ مسیر نجات",
+      "link": "",
+      "time": "۱ هفته",
+      "isDone": true,
+      "desc": "",
+      "imgSrc": "https://abolfazl26s.github.io/project_data/images/projects/landingMasir.png"
+    },
+    {
+      "id": "07",
+      "name": "قالب تجاری APPSAM",
+      "link": "",
+      "time": "3 هفته",
+      "isDone": true,
+      "desc": "",
+      "imgSrc": "https://abolfazl26s.github.io/project_data/images/projects/APPSAM.png"
+    },
+    {
+      "id": "08",
+      "name": "قالب شرکتی Tokso_BE",
+      "link": "",
+      "time": "2 روز",
+      "isDone": true,
+      "desc": "",
+      "imgSrc": "https://abolfazl26s.github.io/project_data/images/projects/Home-toxso-Be.png"
+    },
+    {
+      "id": "09",
+      "name": "قالب فروشگاهی ژومین",
+      "link": "https://abolfazl26s.github.io/zhomin",
+      "time": "1 هفته",
+      "isDone": true,
+      "desc": "",
+      "imgSrc": "https://abolfazl26s.github.io/project_data/images/projects/zhomin.png"
+    },
+    {
+      "id": "10",
+      "name": "قالب فروشگاهی نارنج",
+      "link": "https://abolfazl26s.github.io/narenjShop/",
+      "time": "3 هفته",
+      "isDone": true,
+      "desc": "pages: index, about, checkout, compare, login, product, register, wishlist, 404",
+      "imgSrc": "https://abolfazl26s.github.io/project_data/images/projects/narenjShop.png"
+    },
+    {
+      "id": "11",
+      "name": "قالب تجاری",
+      "link": "https://abolfazl26s.github.io/industryDesign01/",
+      "time": "1 هفته",
+      "isDone": true,
+      "desc": "pages: index, about us, blogs, contact us, projects ",
+      "imgSrc": "https://abolfazl26s.github.io/project_data/images/projects/Industry-Home.png"
+    },
+    {
+      "id": "12",
+      "name": "قالب شرکتی اردیبهشت-شفاء",
+      "link": "https://abolfazl26s.github.io/ordibehesht-shefa",
+      "time": "2 هفته",
+      "isDone": true,
+      "desc": "pages: index, ticket-details ,search, invoice-details , gallery, doctors, details, account",
+      "imgSrc": "https://abolfazl26s.github.io/project_data/images/projects/اردیبهشت-شفاء-hospital.png"
+    },
+    {
+      "id": "13",
+      "name": "آموزش عالی نیایش",
+      "link": "https://abolfazl26s.github.io/niayeshEdu",
+      "time": "2 هفته",
+      "isDone": true,
+      "desc": "pages: index, blog, cart, contact, course-list, instructors, register",
+      "imgSrc": "https://abolfazl26s.github.io/project_data/images/projects/آموزش-عالی-نیایش-خانه.png"
+    },
+    {
+      "id": "14",
+      "name": "ایران جم بازار ",
+      "link": "",
+      "time": "",
+      "isDone": true,
+      "desc": "",
+      "imgSrc": "https://abolfazl26s.github.io/project_data/images/projects/ایران-جم-بازار (2).png"
+    },
+    {
+      "id": "15",
+      "name": "پنل کاربری تجسام",
+      "link": "https://abolfazl26s.github.io/adminPanelTechsam/",
+      "time": "1 هفته",
+      "isDone": true,
+      "desc": "pages: index, businessPlan, consult, startup",
+      "imgSrc": "https://abolfazl26s.github.io/project_data/images/projects/پنل-کاربری-تجسام.png"
+    },
+    {
+      "id": "16",
+      "name": "توسعه دیجیتال نارنج",
+      "link": "https://abolfazl26s.github.io/Narenj/",
+      "time": "1 هفته",
+      "isDone": true,
+      "desc": "ALL Page",
+      "imgSrc": "https://abolfazl26s.github.io/project_data/images/projects/توسعه-دیجیتال-نارنج.png"
+    }
+  ],
+  "myCareerHistory": [
+    {
+      "id": "01",
+      "jobTitle": "برنامه نویس فرانت اند",
+      "CooperationStartDate": "05 / 23 / 1400",
+      "EndDateOfCooperation": "23 / 11 / 1401",
+      "componyName": "ایده گستران ثمین پارس",
+      "logoSrc": "https://abolfazl26s.github.io/project_data/images/1655882802188.jpeg"
+    },
+    {
+      "id": "02",
+      "jobTitle": "طراح UI/UX",
+      "CooperationStartDate": "07 / 05 / 1395",
+      "EndDateOfCooperation": "12 / 11 / 1398",
+      "componyName": "شرکت تی نیتا",
+      "logoSrc": "https://abolfazl26s.github.io/project_data/images/1655882802188.jpeg"
+    }
+  ],
+  "skills": [
+    { "id": "01", "name": "Html & CSS", "levelOfSkill": "95" },
+    { "id": "02", "name": "Bootstrap", "levelOfSkill": "95" },
+    { "id": "03", "name": "vanila js", "levelOfSkill": "80" },
+    { "id": "04", "name": "Jquery", "levelOfSkill": "99" },
+    { "id": "05", "name": "react js", "levelOfSkill": "80" },
+    { "id": "06", "name": "wordPress", "levelOfSkill": "80" },
+    { "id": "07", "name": "GITHub", "levelOfSkill": "90" },
+    { "id": "08", "name": "Figma", "levelOfSkill": "90" },
+    { "id": "09", "name": "Adobe XD", "levelOfSkill": "70" },
+    { "id": "10", "name": "photoshop", "levelOfSkill": "70" },
+    { "id": "11", "name": "Assemble PC", "levelOfSkill": "90" }
+  ],
+  "certificates": [
+    {
+      "id": "01",
+      "title": "مبانی برنامه نویسی C#",
+      "imgSrc": "https://abolfazl26s.github.io/project_data/images/certificates/CSharp.jpg"
+    },
+    {
+      "id": "02",
+      "title": "html & css",
+      "imgSrc": "https://abolfazl26s.github.io/project_data/images/certificates/HtmlCss.jpg"
+    },
+    {
+      "id": "03",
+      "title": "جاوا اسکریپت",
+      "imgSrc": "https://abolfazl26s.github.io/project_data/images/certificates/JavaScript.jpg"
+    },
+    {
+      "id": "04",
+      "title": "مبانی برنامه نویسی C#",
+      "imgSrc": "https://abolfazl26s.github.io/project_data/images/certificates/مبانی برنامه نویسی.jpg"
+    },
+    {
+      "id": "05",
+      "title": "مبانی برنامه نویسی C++",
+      "imgSrc": "https://abolfazl26s.github.io/project_data/images/certificates/مبانی برنامه نویسی.jpg"
+    }
+  ]
+}

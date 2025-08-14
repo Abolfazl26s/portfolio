@@ -1,0 +1,63 @@
+/* Container for the entire dropdown component */
+.dropdown-container {
+    position: relative;
+    display: inline-block;
+    font-family: Arial, sans-serif;
+}
+
+/* Style for the main dropdown button */
+.dropdown-button {
+    background-color: #3f51b5;
+    /* Primary color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    min-width: 120px;
+    /* Ensures button size is consistent */
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-button:hover {
+    background-color: #303f9f;
+    /* Darker color on hover */
+}
+
+/* Style for the dropdown menu */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    /* Positions the menu right below the button */
+    left: 0;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 100;
+    min-width: 120px;
+    margin-top: 5px;
+    /* Adds a small gap between button and menu */
+    overflow: hidden;
+    /* Ensures smooth borders */
+}
+
+/* Style for each item inside the dropdown menu */
+.dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    text-align: center;
+    background-color: white;
+    border: none;
+    color: #333;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #f1f1f1;
+    /* Light gray on hover */
+}

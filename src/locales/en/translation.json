@@ -1,0 +1,227 @@
+{
+    "menuItems": [
+      { "id": "01", "title": "Home", "link": "/", "icon": "fas fa-house-user" },
+      {
+        "id": "02",
+        "title": "Projects",
+        "link": "/portfolio",
+        "icon": "fas fa-briefcase"
+      },
+      {
+        "id": "03",
+        "title": "My Skills",
+        "link": "/skills",
+        "icon": "fab fa-black-tie"
+      },
+      {
+        "id": "04",
+        "title": "Certificates",
+        "link": "/certificates",
+        "icon": "fas fa-user-graduate"
+      }
+    ],
+    "projectTemplate": [
+      {
+        "id": "01",
+        "name": "Bazar Online Store",
+        "link": "https://abolfazl26s.github.io/bazar-online/",
+        "time": "3 weeks",
+        "isDone": true,
+        "desc": "pages: index, login, my-account, order-completed, product, 404,",
+        "imgSrc": "https://abolfazl26s.github.io/project_data/images/projects/bazarOnline.png"
+      },
+      {
+        "id": "02",
+        "name": "Gem Bazar Store",
+        "link": "https://abolfazl26s.github.io/gemStone/",
+        "time": "1 week",
+        "isDone": true,
+        "desc": "pages: index, account, cart, contact, invoice-details, shop, wishlist",
+        "imgSrc": "https://abolfazl26s.github.io/project_data/images/projects/gemStone.png"
+      },
+      {
+        "id": "03",
+        "name": "Call-Off Store",
+        "link": "https://abolfazl26s.github.io/call-off-demo/",
+        "time": "2 weeks",
+        "isDone": true,
+        "desc": "pages: index, login, cart, checkout, product",
+        "imgSrc": "https://abolfazl26s.github.io/project_data/images/projects/callOfProject.jpg"
+      },
+      {
+        "id": "04",
+        "name": "Handy Art Store",
+        "link": "",
+        "time": "1 week",
+        "isDone": true,
+        "desc": "pages: index, login, blog, checkout, order, tiket",
+        "imgSrc": "https://abolfazl26s.github.io/project_data/images/projects/handyArt.png"
+      },
+      {
+        "id": "05",
+        "name": "Ide Gostaran Samin Pars Corporate Template",
+        "link": "https://abolfazl26s.github.io/ICC",
+        "time": "1 week",
+        "isDone": true,
+        "desc": "ALL Page",
+        "imgSrc": "https://abolfazl26s.github.io/project_data/images/projects/icc.png"
+      },
+      {
+        "id": "06",
+        "name": "Masir Nejat Landing Template",
+        "link": "",
+        "time": "1 week",
+        "isDone": true,
+        "desc": "",
+        "imgSrc": "https://abolfazl26s.github.io/project_data/images/projects/landingMasir.png"
+      },
+      {
+        "id": "07",
+        "name": "APPSAM Commercial Template",
+        "link": "",
+        "time": "3 weeks",
+        "isDone": true,
+        "desc": "",
+        "imgSrc": "https://abolfazl26s.github.io/project_data/images/projects/APPSAM.png"
+      },
+      {
+        "id": "08",
+        "name": "Tokso_BE Corporate Template",
+        "link": "",
+        "time": "2 days",
+        "isDone": true,
+        "desc": "",
+        "imgSrc": "https://abolfazl26s.github.io/project_data/images/projects/Home-toxso-Be.png"
+      },
+      {
+        "id": "09",
+        "name": "Zhomin Store Template",
+        "link": "https://abolfazl26s.github.io/zhomin",
+        "time": "1 week",
+        "isDone": true,
+        "desc": "",
+        "imgSrc": "https://abolfazl26s.github.io/project_data/images/projects/zhomin.png"
+      },
+      {
+        "id": "10",
+        "name": "Narenj Store Template",
+        "link": "https://abolfazl26s.github.io/narenjShop/",
+        "time": "3 weeks",
+        "isDone": true,
+        "desc": "pages: index, about, checkout, compare, login, product, register, wishlist, 404",
+        "imgSrc": "https://abolfazl26s.github.io/project_data/images/projects/narenjShop.png"
+      },
+      {
+        "id": "11",
+        "name": "Commercial Template",
+        "link": "https://abolfazl26s.github.io/industryDesign01/",
+        "time": "1 week",
+        "isDone": true,
+        "desc": "pages: index, about us, blogs, contact us, projects ",
+        "imgSrc": "https://abolfazl26s.github.io/project_data/images/projects/Industry-Home.png"
+      },
+      {
+        "id": "12",
+        "name": "Ordibehesht-Shafa Corporate Template",
+        "link": "https://abolfazl26s.github.io/ordibehesht-shefa",
+        "time": "2 weeks",
+        "isDone": true,
+        "desc": "pages: index, ticket-details ,search, invoice-details , gallery, doctors, details, account",
+        "imgSrc": "https://abolfazl26s.github.io/project_data/images/projects/اردیبهشت-شفاء-hospital.png"
+      },
+      {
+        "id": "13",
+        "name": "Niayesh Higher Education",
+        "link": "https://abolfazl26s.github.io/niayeshEdu",
+        "time": "2 weeks",
+        "isDone": true,
+        "desc": "pages: index, blog, cart, contact, course-list, instructors, register",
+        "imgSrc": "https://abolfazl26s.github.io/project_data/images/projects/آموزش-عالی-نیایش-خانه.png"
+      },
+      {
+        "id": "14",
+        "name": "Iran Gem Bazar",
+        "link": "",
+        "time": "",
+        "isDone": true,
+        "desc": "",
+        "imgSrc": "https://abolfazl26s.github.io/project_data/images/projects/ایران-جم-بازار (2).png"
+      },
+      {
+        "id": "15",
+        "name": "Techsam User Panel",
+        "link": "https://abolfazl26s.github.io/adminPanelTechsam/",
+        "time": "1 week",
+        "isDone": true,
+        "desc": "pages: index, businessPlan, consult, startup",
+        "imgSrc": "https://abolfazl26s.github.io/project_data/images/projects/پنل-کاربری-تجسام.png"
+      },
+      {
+        "id": "16",
+        "name": "Narenj Digital Development",
+        "link": "https://abolfazl26s.github.io/Narenj/",
+        "time": "1 week",
+        "isDone": true,
+        "desc": "ALL Page",
+        "imgSrc": "https://abolfazl26s.github.io/project_data/images/projects/توسعه-دیجیتال-نارنج.png"
+      }
+    ],
+    "myCareerHistory": [
+      {
+        "id": "01",
+        "jobTitle": "Front-end Developer",
+        "CooperationStartDate": "05 / 23 / 1400",
+        "EndDateOfCooperation": "23 / 11 / 1401",
+        "componyName": "Ide Gostaran Samin Pars",
+        "logoSrc": "https://abolfazl26s.github.io/project_data/images/1655882802188.jpeg"
+      },
+      {
+        "id": "02",
+        "jobTitle": "UI/UX Designer",
+        "CooperationStartDate": "07 / 05 / 1395",
+        "EndDateOfCooperation": "12 / 11 / 1398",
+        "componyName": "T-Nita Company",
+        "logoSrc": "https://abolfazl26s.github.io/project_data/images/1655882802188.jpeg"
+      }
+    ],
+    "skills": [
+      { "id": "01", "name": "Html & CSS", "levelOfSkill": "95" },
+      { "id": "02", "name": "Bootstrap", "levelOfSkill": "95" },
+      { "id": "03", "name": "Vanilla JS", "levelOfSkill": "80" },
+      { "id": "04", "name": "Jquery", "levelOfSkill": "99" },
+      { "id": "05", "name": "React JS", "levelOfSkill": "80" },
+      { "id": "06", "name": "WordPress", "levelOfSkill": "80" },
+      { "id": "07", "name": "GitHub", "levelOfSkill": "90" },
+      { "id": "08", "name": "Figma", "levelOfSkill": "90" },
+      { "id": "09", "name": "Adobe XD", "levelOfSkill": "70" },
+      { "id": "10", "name": "Photoshop", "levelOfSkill": "70" },
+      { "id": "11", "name": "Assemble PC", "levelOfSkill": "90" }
+    ],
+    "certificates": [
+      {
+        "id": "01",
+        "title": "C# Programming Fundamentals",
+        "imgSrc": "https://abolfazl26s.github.io/project_data/images/certificates/CSharp.jpg"
+      },
+      {
+        "id": "02",
+        "title": "HTML & CSS",
+        "imgSrc": "https://abolfazl26s.github.io/project_data/images/certificates/HtmlCss.jpg"
+      },
+      {
+        "id": "03",
+        "title": "JavaScript",
+        "imgSrc": "https://abolfazl26s.github.io/project_data/images/certificates/JavaScript.jpg"
+      },
+      {
+        "id": "04",
+        "title": "Programming Fundamentals C#",
+        "imgSrc": "https://abolfazl26s.github.io/project_data/images/certificates/مبانی برنامه نویسی.jpg"
+      },
+      {
+        "id": "05",
+        "title": "Programming Fundamentals C++",
+        "imgSrc": "https://abolfazl26s.github.io/project_data/images/certificates/مبانی برنامه نویسی.jpg"
+      }
+    ]
+  }

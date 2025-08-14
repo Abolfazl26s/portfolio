@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./TopNav.scss";
+import LanguageSwitcher from "../changeLanguage/LanguageSwitcher";
 
 const TopNav = () => {
   const [theme, setTheme] = useState(true);
@@ -35,9 +36,10 @@ const TopNav = () => {
                 <i className="fas fa-sun"></i>
               )}
             </button>
-            <button disabled className="btn topNavBtn">
+            <div className="btn topNavBtn">
               <i className="fas fa-language" />
-            </button>
+            </div>
+              <LanguageSwitcher/>
           </div>
         </div>
       </div>
