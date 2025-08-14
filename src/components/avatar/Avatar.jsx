@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import axios from "axios";
 
-export default function BtnCVDownload() {
+const Avatar = () => {
   const { i18n } = useTranslation();
   const [Info, setInfo] = useState([]);
 
@@ -23,27 +23,38 @@ export default function BtnCVDownload() {
   }, []);
 
   // این آرایه شامل اندیس‌های مورد نظر شماست
-  const desiredIndices = [4];
+  const desiredIndices = [0, 5];
 
   // ابتدا آرایه را فیلتر می‌کنیم
-  const filteredItems = Info.filter((item, index) => {
+  const filteredItems= Info.filter((item, index) => {
     return desiredIndices.includes(index);
   });
+
   const currentLanguage = i18n.language;
   return (
     <div>
       {filteredItems.map((item) => (
-        <a
-          href={currentLanguage === "fa" ? item.value_fa : item.value_en}
-          download
-          className="btnDownloadCv"
-        >
-          <i className="fas fa-download"></i>
-          {currentLanguage === "fa"
-            ? item.btn_download_cv_fa
-            : item.btn_download_cv_en}
-        </a>
+        <div>
+          <div className="avatar">
+            <img
+              src={item.urlAvatar}
+              alt={item.title}
+              className="avatar__image"
+            />
+          </div>
+
+          <div className="avatar_info">
+            <h1 className="fullName">
+              {currentLanguage === "fa" ? item.fullName_fa : item.fullName_en}
+            </h1>
+            <p className="mb-3 small">
+              {currentLanguage === "fa" ? item.job_title_fa : item.job_title_en}
+            </p>
+          </div>
+        </div>
       ))}
     </div>
   );
-}
+};
+
+export default Avatar;

@@ -1,16 +1,18 @@
-import React from 'react'
+import React from "react";
+import { useTranslation } from "react-i18next";
 
-export default function SkillItem({skillItems}) {
+export default function SkillItem({ skillItem, currentLanguage }) {
+  const { name_fa, name_en, levelOfSkill } = skillItem;
 
-    const {name,levelOfSkill}=skillItems
+  const persnt = (x) => {
+    return parseFloat((x * 629) / 100);
+  };
 
-    const persnt = (x)=>{
-        return  parseFloat((x * 629) / 100)
-    }
+  const skillName = currentLanguage === "fa" ? name_fa : name_en;
 
   return (
     <>
-      <li data-name={name.toUpperCase()} data-percent={`${levelOfSkill}%`}>
+      <li data-name={skillName.toUpperCase()} data-percent={`${levelOfSkill}%`}>
         <svg viewBox="-10 -10 220 220">
           <g fill="none" strokeWidth={4} transform="translate(100,100)">
             <path d="M 0,-100 A 100,100 0 0,1 86.6,-50" stroke="url(#cl1)" />

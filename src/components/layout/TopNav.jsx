@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import "./TopNav.scss";
 import LanguageSwitcher from "../changeLanguage/LanguageSwitcher";
+import { useTranslation } from "react-i18next";
 
 const TopNav = () => {
+  const { t } = useTranslation();
   const [theme, setTheme] = useState(true);
 
   if (theme) {
@@ -26,7 +28,7 @@ const TopNav = () => {
         <div className="topNav">
           <div className="topNav__logo">
             {/* <img src="images/mylogo-ai.png" alt="" className="mainLogo" /> */}
-            <h2 className="topNav__title">Abolfazl</h2>
+            <h2 className="topNav__title">Wellcome</h2>
           </div>
           <div className="topNav__actionBtn">
             <button onClick={changeTheme} className="btn btnDrakMode topNavBtn">
@@ -39,7 +41,7 @@ const TopNav = () => {
             <div className="btn topNavBtn">
               <i className="fas fa-language" />
             </div>
-              <LanguageSwitcher/>
+            <LanguageSwitcher />
           </div>
         </div>
       </div>
