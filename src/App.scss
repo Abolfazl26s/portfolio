@@ -1,5 +1,5 @@
-body {
-    overflow-x: hidden;
+html {
+    overflow-x: hidden !important;
 }
 
 body.fa {
@@ -14,4 +14,20 @@ body.en {
     direction: ltr;
     text-align: start;
     font-family: 'Roboto', sans-serif;
+}
+
+html {
+    font-size: 1.5vw;
+    /* اندازه فونت پایه را روی 1.5% از عرض پنجره تنظیم می‌کند */
+}
+
+/* سپس در کامپوننت‌ها از rem استفاده کنید */
+h1 {
+    font-size: 2.5rem;
+    /* برابر با 2.5 برابر اندازه فونت پایه */
+}
+
+p {
+    font-size: 1rem;
+    /* برابر با اندازه فونت پایه */
 }

@@ -39,26 +39,26 @@ export default function CareerItem({ careerItem, currentLanguage }) {
           />
         </div>
         <div className="careerHistory__card_desc">
-          <h3 className="componyName">
+          <h5 className="componyName">
             {/* نمایش نام شرکت بر اساس زبان */}
             {currentLanguage === "fa" ? componyName_fa : componyName_en}
-          </h3>
-          <h5 className="jobTitle">
+          </h5>
+          <h6 className="jobTitle">
             {/* نمایش عنوان شغل بر اساس زبان */}
             {currentLanguage === "fa" ? jobTitle_fa : jobTitle_en}
-          </h5>
-          <h6 className="CooperationStartDate">
+          </h6>
+          <p className="CooperationStartDate">
             {/* نمایش تاریخ شروع بر اساس زبان */}
             {currentLanguage === "fa"
               ? CooperationStartDate_fa
               : CooperationStartDate_en}
-          </h6>
-          <h6 className="EndDateOfCooperation">
+          </p>
+          <p className="EndDateOfCooperation">
             {/* نمایش تاریخ پایان بر اساس زبان */}
             {currentLanguage === "fa"
               ? EndDateOfCooperation_fa
               : EndDateOfCooperation_en}
-          </h6>
+          </p>
         </div>
         <h1 className="EndOfDate">
           {/* فراخوانی تابع getEndOfDate با کلید مناسب زبان */}
