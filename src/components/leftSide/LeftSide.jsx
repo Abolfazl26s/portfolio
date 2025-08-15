@@ -13,7 +13,7 @@ export default function LeftSide() {
             <MiddlleNav />
           </div>
         </div>
-        <div className="row mb-3">
+        <div className="row mb-3" >
           <div className="col-12">
             <div className="mainContent">
               <Outlet />

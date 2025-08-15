@@ -6,7 +6,7 @@ export default function CertificatePage() {
   const { i18n } = useTranslation();
   const curLang = i18n.language;
   return (
-    <div className="content">
+    <div id="certificates" className="content">
       <div className="col-12 mb-3">
         <h1 className="mainTitle ">
           {curLang === "fa" ? "گواهی نامه ها" : "Certificates"}

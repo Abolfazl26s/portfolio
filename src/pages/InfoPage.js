@@ -24,7 +24,7 @@ export default function InfoPage() {
   const currentLanguage = i18n.language;
 
   return (
-    <div className="content">
+    <div id="home" className="content">
       <div className="mb-3">
         <h1 className="mainTitle ">
           {currentLanguage === "fa" ? "درباره من" : "About Me"}

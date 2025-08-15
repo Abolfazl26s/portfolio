@@ -1,14 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
 import RightSide from "./../components/rightSide/RightSide";
 import TopNav from "./../components/layout/TopNav";
 import MiddlleNav from "../components/layout/MiddlleNav/MiddlleNav";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import "../components/leftSide/LeftSide.scss";
 import { useTranslation } from "react-i18next";
 
 export default function HomePage() {
   // هوک useTranslation را فراخوانی می‌کنیم تا به زبان دسترسی داشته باشیم
   const { i18n } = useTranslation();
+  const location = useLocation();
+
+  useEffect(() => {
+    // از location.pathname برای دریافت آدرس فعلی استفاده می‌کنیم
+    const id = location.pathname.substring(1);
+    const element = document.getElementById(id);
+
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [location.pathname]); // این هوک هر بار که آدرس تغییر کند، اجرا می‌شود
 
   return (
     <>
