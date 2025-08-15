@@ -14,7 +14,7 @@ export default function CertificateItem({ certificate, currentLanguage }) {
           style={{ maxHeight: "250px" }}
         />
         <div className="card-body">
-          <h5 className="card-title">
+          <h5 className="card-title" style={{"textTransform":"capitalize"}}>
             {currentLanguage === "fa" ? title_fa : title_en}
           </h5>
         </div>
