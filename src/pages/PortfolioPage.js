@@ -3,12 +3,15 @@ import PortfolioCards from "../components/portfolio/PortfolioCards";
 import { useTranslation } from "react-i18next";
 
 export default function PortfolioPage() {
-  const { t } = useTranslation();
+  const { i18n } = useTranslation();
+  const curLang = i18n.language;
 
   return (
     <div className="content">
       <div className="mb-3">
-        <h1 className="mainTitle ">{t("portfolio_page_title")}</h1>
+        <h1 className="mainTitle ">
+          {curLang === "fa" ? " پروژه ها" : "Projects"}
+        </h1>
       </div>
 
       <PortfolioCards />

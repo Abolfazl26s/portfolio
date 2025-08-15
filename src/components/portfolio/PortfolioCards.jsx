@@ -1,65 +1,92 @@
-import React from "react";
-import PropTypes from "prop-types";
-import ShapeMonitor from "./ShapeMonitor";
+import React, { useEffect, useState } from "react";
+import PortfolioCard from "./PortfolioCard";
+import Spinner from "../layout/spinner/Spinner";
+import axios from "axios";
 import { useTranslation } from "react-i18next";
 
-/**
- * کامپوننت PortfolioCard برای نمایش یک آیتم از پورتفولیو.
- * این کامپوننت اطلاعات یک پروژه را دریافت کرده و به صورت یک کارت نمایش می‌دهد.
- * @param {{ project: { link: string, imgSrc: string, name_fa: string, name_en: string, time_fa: string, time_en: string } }} props
- */
-export default function PortfolioCard({ project }) {
+export default function PortfolioCards() {
   const { i18n } = useTranslation();
+  const [projects, setProjects] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 6;
+
+  const getAllProjects = async () => {
+    try {
+      const apiUrl = process.env.REACT_APP_API_URL;
+      const response = await axios.get(apiUrl);
+      setProjects(response.data.projectTemplate);
+    } catch (error) {
+      console.error("Error fetching projects:", error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    getAllProjects();
+  }, []);
 
   const currentLanguage = i18n.language;
-  const projectName =
-    currentLanguage === "fa" ? project.name_fa : project.name_en;
-  const projectTime =
-    currentLanguage === "fa" ? project.time_fa : project.time_en;
+  const totalPages = Math.ceil(projects.length / itemsPerPage);
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const currentProjects = projects.slice(startIndex, endIndex);
+
+  const renderPageNumbers = () => {
+    const pageNumbers = [];
+    for (let i = 1; i <= totalPages; i++) {
+      pageNumbers.push(
+        <button
+          key={i}
+          className={`btn mx-1 ${
+            i === currentPage ? "btn-primary" : "btn-secondary"
+          }`}
+          onClick={() => setCurrentPage(i)}
+        >
+          {i}
+        </button>
+      );
+    }
+    return pageNumbers;
+  };
+
+  if (loading) {
+    return <Spinner />;
+  }
 
   return (
-    <div className="col-xl-4 col-md-6 mb-3 d-flex flex-column align-items-center justify-content-center">
-      <a
-        href={project.link}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-decoration-none"
-      >
-        {/* از نام ترجمه شده پروژه در alt استفاده می‌کنیم */}
-        <ShapeMonitor imgSrc={project.imgSrc} projectName={projectName} />
-      </a>
-
-      <div className="pt-4 pb-3 d-flex flex-column align-items-start justify-content-center">
-        <p className="text-wrap fw-bolder">
-          <a
-            href={project.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-dark text-decoration-none"
-          >
-            <i className="fas fa-link"></i>
-            <span className="ms-1">{projectName}</span>
-          </a>
-        </p>
-
-        <p>
-          <i className="fas fa-clock"></i>
-          <span className="text-dark ms-1">{projectTime}</span>
-        </p>
+    <div className="portfolio-container">
+      <div className="row">
+        {currentProjects.map((project) => (
+          <PortfolioCard
+            key={project.id}
+            project={project}
+            currentLanguage={i18n.language}
+          />
+        ))}
       </div>
+      {totalPages > 1 && (
+        <div className="pagination-controls d-flex justify-content-center my-4">
+          <button
+            className="btn btn-primary mx-2"
+            onClick={() => setCurrentPage((prevPage) => prevPage - 1)}
+            disabled={currentPage === 1}
+          >
+            {currentLanguage === "fa" ? "قبل" : "prev"}
+          </button>
+
+          {renderPageNumbers()}
+
+          <button
+            className="btn btn-primary mx-2"
+            onClick={() => setCurrentPage((prevPage) => prevPage + 1)}
+            disabled={currentPage === totalPages}
+          >
+            {currentLanguage === "fa" ? "بعدی" : "next"}
+          </button>
+        </div>
+      )}
     </div>
   );
 }
-
-// تعریف PropTypes برای اطمینان از صحت داده‌های ورودی (پراپ‌ها)
-PortfolioCard.propTypes = {
-  project: PropTypes.shape({
-    link: PropTypes.string.isRequired,
-    imgSrc: PropTypes.string.isRequired,
-    name_fa: PropTypes.string.isRequired,
-    name_en: PropTypes.string.isRequired,
-    time_fa: PropTypes.string.isRequired,
-    time_en: PropTypes.string.isRequired,
-    isDone: PropTypes.bool,
-  }).isRequired,
-};

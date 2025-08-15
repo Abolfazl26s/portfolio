@@ -4,7 +4,8 @@ import LanguageSwitcher from "../changeLanguage/LanguageSwitcher";
 import { useTranslation } from "react-i18next";
 
 const TopNav = () => {
-  const { t } = useTranslation();
+  const { i18n } = useTranslation();
+  const currentLanguage = i18n.language;
   const [theme, setTheme] = useState(true);
 
   if (theme) {
@@ -28,7 +29,9 @@ const TopNav = () => {
         <div className="topNav">
           <div className="topNav__logo">
             {/* <img src="images/mylogo-ai.png" alt="" className="mainLogo" /> */}
-            <h2 className="topNav__title">Wellcome</h2>
+            <h2 className="topNav__title">
+              {currentLanguage === "fa" ? "خوش آمدید" : "Wellcome"}
+            </h2>
           </div>
           <div className="topNav__actionBtn">
             <button onClick={changeTheme} className="btn btnDrakMode topNavBtn">

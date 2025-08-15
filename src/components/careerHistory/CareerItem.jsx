@@ -1,10 +1,7 @@
 import React from "react";
 import "./CareerItem.scss";
-import { useTranslation } from "react-i18next";
 
 export default function CareerItem({ careerItem, currentLanguage }) {
-  const { t } = useTranslation();
-
   // destructuring را برای استفاده از کلیدهای چندزبانه به‌روز کردیم
   const {
     componyName_fa,
@@ -18,13 +15,15 @@ export default function CareerItem({ careerItem, currentLanguage }) {
     logoSrc,
   } = careerItem;
 
+  const getYearFromString = (dateString) => {
+    const date = new Date(dateString);
+    return date.getFullYear();
+  };
+
   const getEndOfDate = (date) => {
     // از یک شرط برای اطمینان از اینکه date یک رشته معتبر است استفاده می‌کنیم
     if (typeof date === "string" && date.length > 0) {
-      // برای نمایش سال، تاریخ را از حالت شمسی به میلادی تبدیل و سپس سال را استخراج می‌کنیم
-      // فرض می‌کنیم تاریخ‌ها به شکل yyyy/mm/dd هستند
-      // در اینجا، با توجه به فرمت تاریخ شمسی شما، نیاز به substring دقیق‌تری داریم
-      return date.substring(9, 14); // سال را از 1400 استخراج می‌کند
+      return getYearFromString(date.toString());
     }
     return ""; // یک رشته خالی یا یک مقدار پیش‌فرض برگردانید
   };

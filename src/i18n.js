@@ -37,7 +37,7 @@ i18n
   .init({
     lng: "fa",
     fallbackLng: "en",
-    debug: false,
+    debug: true,
     interpolation: {
       escapeValue: false,
     },
@@ -48,6 +48,8 @@ i18n
       // این تابع با تغییر زبان اجرا می‌شود
       // و استایل و جهت صفحه را تغییر می‌دهد
       document.body.dir = lng === "fa" ? "rtl" : "ltr";
+      // اضافه کردن کلاس به body برای تغییر فونت
+      document.body.className = lng;
     },
   });
 
