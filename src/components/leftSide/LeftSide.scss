@@ -21,6 +21,7 @@
         opacity: 0;
       }
     }
+
     to {
       transform: translateX(0px);
       opacity: 1;
@@ -31,12 +32,13 @@
     font-weight: 900;
     position: relative;
     margin-bottom: 1em;
-    padding-right: 110px;
+    padding-inline-start: 110px;
+
     &::after {
       content: '';
       position: Absolute;
       top: 50%;
-      right: 0;
+      inset-inline-start: 0;
       width: 100px;
       height: 4px;
       background: red;
@@ -85,20 +87,24 @@
   #experience,
   #education {
     padding: 1.5em;
+
     .experience-title,
     .education-title {
       font-weight: bolder;
       font-size: 1.5em;
+
       i {
         color: $accentColor;
         font-size: 0.8em;
       }
     }
+
     .experience-card,
     .education-card {
       background-color: var(--bg-color);
       padding: 1em;
       border-radius: 1em;
+
       .card-title {
         font-size: 1em;
         font-weight: bold;

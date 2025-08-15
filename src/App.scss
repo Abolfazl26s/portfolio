@@ -1,3 +1,17 @@
 body {
     overflow-x: hidden;
 }
+
+body.fa {
+    // استایل های مربوط به زبان فارسی
+    direction: rtl;
+    text-align: end;
+    font-family: 'Vazirmatn', sans-serif;
+}
+
+body.en {
+    // استایل های مربوط به زبان انگلیسی
+    direction: ltr;
+    text-align: start;
+    font-family: 'Roboto', sans-serif;
+}

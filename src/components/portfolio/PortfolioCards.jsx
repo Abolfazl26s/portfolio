@@ -40,7 +40,7 @@ export default function PortfolioCards() {
         <button
           key={i}
           className={`btn mx-1 ${
-            i === currentPage ? "btn-primary" : "btn-secondary"
+            i === currentPage ? "btn-warning" : "btn-secondary"
           }`}
           onClick={() => setCurrentPage(i)}
         >
@@ -69,7 +69,7 @@ export default function PortfolioCards() {
       {totalPages > 1 && (
         <div className="pagination-controls d-flex justify-content-center my-4">
           <button
-            className="btn btn-primary mx-2"
+            className="btn mx-2"
             onClick={() => setCurrentPage((prevPage) => prevPage - 1)}
             disabled={currentPage === 1}
           >
@@ -79,7 +79,7 @@ export default function PortfolioCards() {
           {renderPageNumbers()}
 
           <button
-            className="btn btn-primary mx-2"
+            className="btn mx-2"
             onClick={() => setCurrentPage((prevPage) => prevPage + 1)}
             disabled={currentPage === totalPages}
           >

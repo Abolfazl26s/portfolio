@@ -1,40 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import "./LanguageSwitcher.css";
 
-const LanguageSwitcher = () => {
+const DirectionSwitcher = () => {
   const { i18n } = useTranslation();
-  const [isOpen, setIsOpen] = useState(false);
+  const [isRTL, setIsRTL] = useState(i18n.language === "fa");
 
-  // تابعی برای تغییر زبان و بستن دراپ‌دون
-  const changeLanguage = (lang) => {
-    i18n.changeLanguage(lang);
-    setIsOpen(false);
+  // useEffect برای اعمال تغییرات به تگ <body> و هماهنگی با i18n
+  useEffect(() => {
+    document.body.dir = isRTL ? "rtl" : "ltr";
+  }, [isRTL]);
+
+  const toggleDirectionAndLanguage = () => {
+    const newLanguage = i18n.language === "fa" ? "en" : "fa";
+    i18n.changeLanguage(newLanguage);
+    setIsRTL(newLanguage === "fa");
   };
 
   return (
-    <div className="dropdown-container">
-      <button onClick={() => setIsOpen(!isOpen)} className="dropdown-button">
-        {i18n.language === "fa" ? "فارسی" : "English"}
-      </button>
-      {isOpen && (
-        <div className="dropdown-menu">
-          <button
-            onClick={() => changeLanguage("fa")}
-            className="dropdown-item"
-          >
-            فارسی
-          </button>
-          <button
-            onClick={() => changeLanguage("en")}
-            className="dropdown-item"
-          >
-            English
-          </button>
-        </div>
-      )}
-    </div>
+      <div className="btn topNavBtn" onClick={toggleDirectionAndLanguage}>
+        <i className="fas fa-language" />
+      </div>
   );
 };
 
-export default LanguageSwitcher;
+export default DirectionSwitcher;

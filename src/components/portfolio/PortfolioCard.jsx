@@ -38,13 +38,15 @@ export default function PortfolioCard({ project }) {
             className="text-dark text-decoration-none"
           >
             <i className="fas fa-link"></i>
-            <span className="ms-1">{projectName}</span>
+            <span style={{ "margin-inline-start": "4px" }}>{projectName}</span>
           </a>
         </p>
 
         <p>
           <i className="fas fa-clock"></i>
-          <span className="text-dark ms-1">{projectTime}</span>
+          <span className="text-dark" style={{ "margin-inline-start": "4px" }}>
+            {projectTime}
+          </span>
         </p>
       </div>
     </div>
